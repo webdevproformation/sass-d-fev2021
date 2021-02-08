@@ -70,3 +70,46 @@ h2 a span
 @media
 
 */
+
+// cas pratique 
+// crer le fichier 08-exo.scss 
+// stopper et compilier le nouveau fichier
+
+// variables 
+// 2 couleur bleu et rouge (récupérer les couleurs sur colorhunt)
+// 2 tailles : l 20px  // h 30px
+// marge : 5px 
+// responsive 
+// variable grand-ecran  min de largeur 960px
+// variable moyen-ecran  min de largeur 720px  max de largeur 960px
+
+/* les règles css suivants (syntaxe sass) 
+
+h1{
+    taille de police : marge * 5
+    color : blue
+    border : blue et le reste
+}
+
+p{
+    marge des 4 côtes : moitier de la hauteur
+    color : rouge
+    marge h et b marge et g et droite 4 * marge 
+}
+
+// si je suis une grand écran alors 
+h1 
+taille police de 7* marge
+
+// si je suis une grand écran ou un moyen écran alors 
+p
+taille police de 2* marge
+
+
+
+
+
+*/
+
+
+
