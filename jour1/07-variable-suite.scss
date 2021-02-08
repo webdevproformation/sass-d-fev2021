@@ -1,0 +1,72 @@
+// Arrêter et reprendre 
+// sass 07-variable-suite.scss 07-variable-suite.css --watch
+
+// variable 
+// stocker des valeurs 
+
+$normal : 16px;
+$petit : $normal * 0.7 ;
+$grand : $normal * 1.5 ;
+
+.introduction{
+    font-size: $grand;
+}
+.conclusion {
+    font-size: $petit;
+}
+
+// il est possible de stocker dans des variables des sélecteurs / mot css 
+
+$partie1 : ".first" ; // stocker du texte dans la variable 
+$partie2 : ".last" ;
+
+#{$partie1}{
+    color : red;
+}
+
+#{$partie2}{ // sélecteur #{$nom-variable}
+    font-size: $grand; // valeur $nom
+}
+
+// responsive design 
+
+$martphone : "screen and (max-width : 350px)";
+
+@media #{$martphone}{
+    h1{
+        font-size: $petit;
+    }
+}
+
+$tablette-paysage : "screen and (min-width:350px) and (max-width:480px)" ;
+
+// vous stockez 1 fois la valeur => 
+
+@media #{$tablette-paysage}{
+    h1{
+        font-size: $normal;
+    }
+}
+
+@media #{$martphone} , #{$tablette-paysage}{
+    p{
+        font-size: $grand;
+    }
+}
+
+/*
+début du fichier => 10 / 15 variables
+ou sinon
+créer un fichier à part => 20 variables 
+=> n'importe 
+
+p 
+#intro
+.hello
+p .hello
+h2 a span 
+
+@font-face
+@media
+
+*/

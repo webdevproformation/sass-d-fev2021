@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.introduction {
+  font-size: 24px;
+}
+
+.conclusion {
+  font-size: 11.2px;
+}
+
+.first {
+  color: red;
+}
+
+.last {
+  font-size: 24px;
+}
+
+@media screen and (max-width : 350px) {
+  h1 {
+    font-size: 11.2px;
+  }
+}
+@media screen and (min-width:350px) and (max-width:480px) {
+  h1 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width : 350px), screen and (min-width:350px) and (max-width:480px) {
+  p {
+    font-size: 24px;
+  }
+}
+/*
+début du fichier => 10 / 15 variables
+ou sinon
+créer un fichier à part => 20 variables 
+=> n'importe 
+
+p 
+#intro
+.hello
+p .hello
+h2 a span 
+
+@font-face
+@media
+
+*/
+
+/*# sourceMappingURL=07-variable-suite.css.map */
