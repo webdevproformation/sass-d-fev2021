@@ -1,0 +1,37 @@
+/*
+créer des variables 
+largeur 12px
+vert #bbdfc8
+rouge #ff5e78
+marge 3px
+
+h1 
+taille de police = 3 fois la marge
+color rouge
+bordure couleur verte
+
+p 
+taille de police  = largeur
+margin h et b 3 fois la marge et g et d 2 fois la marge
+bordure couleur verte
+sass 06-exo.scss 06-exo.css --watch
+
+*/
+
+$largeur : 12px;
+$vert : #bbdfc8;
+$rouge : #ff5e78;
+$marge : 3px ;
+
+h1{
+    font-size: $marge * 3;
+    color : $rouge;
+    border: $marge solid $vert;
+}
+
+p{
+    font-size: $largeur;
+    margin : $marge * 3 $marge *2 ;
+    border: $marge solid $vert;
+}
+
