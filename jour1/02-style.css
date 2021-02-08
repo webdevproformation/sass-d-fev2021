@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+sass 02-style.scss 02-style.css --watch
+
+sass => compilateur => traducteur
+02-style.scss traduire dans le fichier 02-style.css
+traducteur est mis en mode watch ----watch
+
+à partir du moment où vous allez effectuer une modification du fichier 
+02-style.scss ET que vous l'enregistrez 
+automatiquement le traduction va agir 
+
+*/
+h1 {
+  color: red;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=02-style.css.map */
