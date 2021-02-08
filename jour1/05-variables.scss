@@ -1,0 +1,42 @@
+// Arrêt compilateur
+// sass 05-variables.scss 05-variables.css --watch
+
+// en sass vous avez 2 manières de faire des commentaires 
+// commentaire monoligne
+/*
+    multilignes
+    avec un saut
+*/
+
+// les commentaires monolignes ne sont pas compiler dans le fichier final
+
+// variable en sass 
+
+$bleu : #161d6f ;
+$rouge : #fbaccc; 
+
+// lorsque Ctrl + S => Sass va compiler 
+// remarquer que la variable n'est pas 
+// présente dans le fichier .css
+// variable en sass 
+
+// si je veux la voir => utiliser 
+
+h1{
+    color : $bleu;
+    border : 1px solid $bleu; 
+    background : $rouge;
+}
+
+// ----- 
+// cas pratique : dans ce fichier créer deux variables
+// rose #ff9292
+// jaune #ffee93
+// utiliser ces deux variables dans le sélecteur suivant
+/*
+p 
+    bordure en haut 1px solid jaune
+    taille de police 30px
+    couleur de police jaune
+
+*/
