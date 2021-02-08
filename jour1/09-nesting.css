@@ -1,0 +1,54 @@
+nav img {
+  border: 1px solid black;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  color: #d8c292;
+}
+
+nav img {
+  border: 1px solid black;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  color: #d8c292;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+}
+
+p strong a:hover {
+  color: grey;
+}
+div.introduction {
+  font-size: 30px;
+}
+@media (min-width: 720px) {
+  div.introduction {
+    font-size: 35px;
+  }
+}
+
+/*# sourceMappingURL=09-nesting.css.map */

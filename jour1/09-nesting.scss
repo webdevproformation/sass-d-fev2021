@@ -1,0 +1,104 @@
+// sass 09-nesting.scss 09-nesting.css --watch
+
+// imagine dans un fichier html => 
+// structure de code suivante => menu du site 
+// <nav>
+//   <img> 
+//   <ul>
+//      <li></li> 
+//      <li></li> 
+//      <li></li> 
+
+// partie centrale du site 
+// <section> 
+//   <img> 
+//   <ul>
+//      <li></li> 
+//      <li></li> 
+//      <li></li> 
+
+// mettre en forme la balise img qui est dans la balise nav 
+
+$bordure : 1px solid black;
+$marron : #d8c292;
+
+nav img{
+    border: $bordure;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    color : $marron;
+}
+// répéter le parent à chaque fois sur chaque sélecteur 
+// technique en SASS uniquement => nesting (imbrication)
+
+nav {
+    img{
+        border: $bordure;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        color : $marron;
+    }
+}
+// nesting => mettre dans des accolades des sélecteurs 
+
+// écrire moins //
+// permet de mieux organiser son code 
+// css classique 
+a{
+    color : red ;
+    text-decoration: none;
+}
+a:hover{
+    color : blue ;
+}
+// :hover :focus :first-child 
+// nesting avec le symbole & 
+
+a{
+    color : red ;
+    text-decoration: none;
+    &:hover{
+        color : blue ;
+    }
+}
+// imbrication sur des pseudo sélecteur 
+
+// aucun problème plusieurs niveaux d'imbrications
+// Arrête au niveau de profondeur 2 / 3 maximum 
+p{
+    strong{
+        a{
+            img{
+
+            }
+        }
+    }
+}
+
+// mixer l'écriture classique de css avec l'imbrication
+p{
+    strong a { // écriture classique 
+        
+            &:hover{
+                color : grey;
+            }
+    }
+    span a{
+
+    }
+}
+// imbrication avec le responsive design
+div.introduction{
+    font-size: 30px;
+    @media (min-width:720px) {
+        font-size: 35px;
+    }
+}
