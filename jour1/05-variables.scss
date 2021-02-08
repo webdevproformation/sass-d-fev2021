@@ -40,3 +40,73 @@ p
     couleur de police jaune
 
 */
+
+$rose : #ff9292 ;
+$jaune : #ffee93;
+
+
+p{
+    border-top: 1px solid $jaune;
+    font-size: 30px;
+    color : $jaune;
+}
+
+// variable, il possible de stocker 
+// plusieurs valeurs 
+
+$border : 2px solid red ; 
+
+p{
+    border : $border;
+}
+
+$marge : 5px ;
+
+p{
+    margin : $marge $marge * 3 ;
+    padding : $marge / 2;
+}
+// variable => effectuer des calculs sur ces variables
+// margin : 10px (4 côtes)
+// margin : 5px  10px (haut et bas 5px // 10px gauche et droite)
+// margin : 2px 7px 3px 1px ( sens des aiguilles d'une montre)
+
+
+// composer des variables avec d'autres variables 
+
+$gris : #f6f6f6 ;
+$ombre : 2px 2px 2px $gris ;
+$hauteur : 30px;
+
+p{
+    text-shadow: $ombre;
+    box-shadow: $ombre;
+    height: $hauteur;
+}
+
+
+// cas pratique : 
+// créer le fichier 06-exo.scss 
+
+// stoper le compilateur et le redémmarrer sur le fichier 06-exo.scss 
+
+/*
+créer des variables 
+largeur 12px
+vert #bbdfc8
+rouge #ff5e78
+marge 3px
+
+
+h1 
+taille de police = 3 fois la marge
+color rouge
+bordure couleur verte
+
+p 
+taille de police  = largeur
+margin h et b 3 fois la marge et g et d 2 fois la marge
+bordure couleur verte
+
+
+*/

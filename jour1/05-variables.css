@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     multilignes
     avec un saut
@@ -13,6 +14,47 @@ p
     bordure en haut 1px solid jaune
     taille de police 30px
     couleur de police jaune
+
+*/
+p {
+  border-top: 1px solid #ffee93;
+  font-size: 30px;
+  color: #ffee93;
+}
+
+p {
+  border: 2px solid red;
+}
+
+p {
+  margin: 5px 15px;
+  padding: 2.5px;
+}
+
+p {
+  text-shadow: 2px 2px 2px #f6f6f6;
+  box-shadow: 2px 2px 2px #f6f6f6;
+  height: 30px;
+}
+
+/*
+créer des variables 
+largeur 12px
+vert #bbdfc8
+rouge #ff5e78
+marge 3px
+
+
+h1 
+taille de police = 3 fois la marge
+color rouge
+bordure couleur verte
+
+p 
+taille de police  = largeur
+margin h et b 3 fois la marge et g et d 2 fois la marge
+bordure couleur verte
+
 
 */
 
