@@ -1,0 +1,24 @@
+h1 {
+  font-size: 25px;
+  color: #845ec2;
+  border: 1px solid #845ec2;
+}
+
+p {
+  margin: 15px;
+  color: #ff5e78;
+  margin: 5px 20px;
+}
+
+@media screen and (min-width : 960px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width : 960px), screen and (min-width : 720px) and (max-width : 960px) {
+  p {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=08-exo.css.map */

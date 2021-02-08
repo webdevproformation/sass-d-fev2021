@@ -47,19 +47,16 @@ h2 a span
 
 */
 /* les règles css suivants (syntaxe sass) 
-
 h1{
     taille de police : marge * 5
     color : blue
     border : blue et le reste
 }
-
 p{
     marge des 4 côtes : moitier de la hauteur
     color : rouge
     marge h et b marge et g et droite 4 * marge 
 }
-
 // si je suis une grand écran alors 
 h1 
 taille police de 7* marge

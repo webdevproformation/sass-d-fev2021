@@ -1,0 +1,43 @@
+// sass 08-exo.scss 08-exo.css --watch
+
+// Variables 
+
+$rouge : #ff5e78;
+$bleu : #845ec2;
+$l : 20px;
+$h : 30px;
+$marge : 5px ;
+$grand-ecran : "screen and (min-width : 960px)";
+$moyen-ecran : "screen and (min-width : 720px) and (max-width : 960px)";
+
+//utilisation des variables 
+
+h1{
+    font-size: $marge * 5;
+    color : $bleu;
+    border : 1px solid $bleu;
+}
+p{
+    margin : $h / 2;
+    color : $rouge ;
+    margin : $marge $marge * 4;
+}
+
+@media #{$grand-ecran}{
+    h1{
+        font-size: $marge * 7;
+    }
+}
+
+@media #{$grand-ecran} , #{$moyen-ecran}{
+    p{
+        font-size: $marge * 2;
+    }
+}
+// débug sur Sass => compilateur lire le css que vous voulez générer 
+// relecture erreur de syntaxe 
+// le compilateur garantir que votre css qui va être généré contenir moins d'erreur
+// syntaxe 
+
+
+
