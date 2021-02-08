@@ -1,0 +1,22 @@
+//sass 10-exo.scss 10-exo.css --watch
+
+$ecran-tablette : "(min-width:400px) and (max-width:700px)";
+
+.intro{
+    p:nth-of-type(3){
+        color:green;
+    }
+    p{
+        color:red;
+    }
+}
+.conclusion{
+    p:nth-of-type(2):hover{
+        color:blue;
+    }
+}
+p{
+    @media #{$ecran-tablette}{
+        color:yellow;
+    }
+}
