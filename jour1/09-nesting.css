@@ -1,3 +1,4 @@
+@charset "UTF-8";
 nav img {
   border: 1px solid black;
 }
@@ -58,5 +59,32 @@ div.introduction {
     font-size: 35px;
   }
 }
+
+/* cas pratique 
+
+Créer un nouveau fichier 10-exo.html contenant le html suivant
+
+div class container 
+    section class intro
+        h2 contenent 5 mots factices
+        5 p contenant 10 mots factices
+    section class conclusion
+        h2 contenant le mot conclusion
+        2 paragraphes avec 5 mots factices
+
+2/ créer un nouveau fichier 10-exo.scss
+
+  a. sélectionner le 3eme p qui est dans la section intro et lui donner une couleur verte 
+
+  b. pour tous les autres p de cette section mettre la couleur rouge 
+
+  c. sélectionner le dernier p dans la section conclusion et lorsque vous passer la souris dessus, changer sa couleur en blue 
+
+  d. enfin si l'écran est compris entre 400px et 700px =>  
+  tous les p de la page auront la couleur jaune
+
+
+
+*/
 
 /*# sourceMappingURL=09-nesting.css.map */
