@@ -39,9 +39,17 @@ a:hover {
   color: blue;
 }
 
+p strong a img {
+  color: white;
+}
+
 p strong a:hover {
   color: grey;
 }
+p span a {
+  color: white;
+}
+
 div.introduction {
   font-size: 30px;
 }
