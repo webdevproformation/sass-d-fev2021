@@ -3,6 +3,8 @@
 // @import 
 @import "_responsive.scss";
 @import "_palette.scss";
+@import "librairie/page-accueil.scss"; 
+// le même principe les fichiers externes comme : .js .css img .png / .jpg
 // utiliser les variables 
 @media #{$ecran-tablette-portrait}{
     h1{
@@ -31,3 +33,22 @@
     }  
 }
 // sass 07-exo.scss 07-exo.css --watch
+
+// pause café => 15 min - 15h36
+
+// @mixin / @include => fonction dans css 
+
+//  @if @else // @for @each
+
+// build in => effectuer des traitements sur les variables 
+// jeudi matin => fin SASS 
+// cas pratiques SASS 
+
+// hello 
+// des cas pratiques en rapport avec notre projet
+// des cas pratiques : que tu peux réaliser dans n'importe quelle site 
+// faire utiliser sass // rappels en css // et rappel en html 
+// petits cas pratiques (t'inspirer pour ton projet final !!) 
+
+// => créer le fichier 08-mixin.scss
+// sass 08-mixin.scss 08-mixin.css --watch

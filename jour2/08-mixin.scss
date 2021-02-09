@@ -1,0 +1,65 @@
+// 08-mixin.scss
+// sass 08-mixin.scss 08-mixin.css --watch
+
+// dans SASS, il est possible de créer des fonctions 
+// fonction = permet de stocker dans un mot des instructions
+// variable stocker une valeur
+
+$variable1 : 20px;
+$variable2 : 20px 30px;
+$introduction : "#presentation";
+
+// utiliser les variables 
+#{$introduction}{
+    padding : $variable2;
+    font-size: $variable1;
+}
+
+// dans une fonction , stocker des instructions 
+// SASS une fonction est appelée mixin 
+// créer la fonction 
+@mixin centrer { // les parenthèses sont facultatives s'il n'y a pas de paramètres 
+    width: 960px;
+    margin: 0 auto;
+}
+// utiliser les instructions stockées dans la mixin 
+h1{
+    @include centrer ;
+}
+// il est possible d'avoir des mixin avec des paramètres
+// 3 paramètres 
+@mixin bordure ( $epaisseur , $angle , $color ){
+    border : $epaisseur solid $color ;
+    border-radius: $angle; 
+}
+// utilisation de la mixin : chaque paramètre doit avoir une valeur 
+a{
+    @include bordure( 1px , 5px , #e67e22);
+}
+
+// il est possible de donner des valeurs par défaut aux paramètres => utiliser des images 
+// la mixin miniature dispose de 2 paramètres 
+// auxquels on a défini une valeur par défaut 
+@mixin miniature ( $angle : 5px , $couleur : white  ){
+    border-radius: $angle ;
+    padding : 10px;
+    background: $couleur;
+}
+.img1{
+    @include miniature; // sans parenthèses et paramètres
+    // les valeurs par défaut qui sont appliquées 
+}
+.img2{
+    @include miniature( 10px , black );
+    // si on appelle la mixin avec des valeurs 
+    // ceux seront ces valeurs qui vont être prise en compte  
+    // attention je dois respecter l'ordre des paramètres dans la déclaration
+}
+// je veux utiliser la mixin et juste changer la couleur de fond mais garder la valeur par défaut de l'angle 
+.img3{
+    @include miniature( $couleur : green );
+    // angle va garder sa valeur par défaut
+    // par contre change la couleur du fond 
+    // mais vu que l'ordre n'est pas respecté => 
+    // $couleur : green
+}
