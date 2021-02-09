@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width:960px) {
   h1 {
     font-size: 22px;
@@ -29,5 +30,30 @@
     font-size: 12px;
   }
 }
+/*
+maintenant que vous avez créer le fichier _responsive.scss => réutiliser dans d'autres projets 
+
+1/ créer un nouveau fichier _palette.scss (dans le dossier jour2)
+
+  a/ dans ce fichier vous allez créer 4 variables : 4 couleurs 
+    turquoise / emerald / peter-river / amethyst affecter la bonne couleur
+    https://flatuicolors.com/palette/defo 
+
+2/ créer le fichier 07-exo.scss (dans le dossier jour2)
+
+  a/ ce fichier import le fichier _responsive.scss (utilisé dans l'exo précédent)
+  b/ ce fichier import le fichier _palette.scss
+
+  c/ si tablette en portrait 
+    h1 taille 25px et une couleur amethyst
+    p  taille de 15px et une couleur emerald
+    body couleur de fond turquoise
+
+  d/ si tablette en paysage 
+    h1 taille 27px et une couleur emerald
+    p  taille de 17px et une couleur peter-river
+    body couleur de fond amethyst   
+  e/ compiler le fichier 07-exo.scss via la commande suivante : sass 07-exo.scss 07-exo.css --watch
+*/
 
 /*# sourceMappingURL=06-exo.css.map */
