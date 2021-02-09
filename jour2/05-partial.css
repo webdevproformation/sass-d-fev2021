@@ -1,6 +1,35 @@
+@charset "UTF-8";
 h1 {
   height: 400px;
   width: 200px;
 }
+
+/*
+1/ créer le fichier _responsive.scss qui contient les 3 variables suivantes
+
+  a/ créer une variable ecran-ordinateur => stocker médiaquery screen and taille ecran minimum 960px
+  b/ créer une variable ecran-tablette-paysage => stocker médiaquery screen and taille ecran minimum 768px et max 960px
+  c/ créer une variable ecran-tablette-portrait => stocker médiaquery screen and taille ecran minimum 480px et max 768px
+
+2/ créer le fichier _colors.scss
+
+  a/ créer 4 variables de couleur en utilisant une palette de couleur fourni par le site  https://colorhunt.co/
+    1. rose-clair
+    2. rose
+    3. bleu
+    4. bleu-fonce 
+
+3/ créer le fichier 06-exo.scss
+
+  a/ importer les partials _responsive.scss et _colors.scss
+  b/ si l'écran est ordinateur => h1 taille de 22px et les p taille de 14px et couleur blue foncé
+  c/ si l'écran est tablette-paysage => h1 taille de 20px et rose-clair et les p taille de 12px couleur bleu clair
+  d/ si l'écran est tablette-portrait => h1 taille de 18px et rose et les p taille de 12px
+
+  // une fois réalisé 
+  // compiler le fichier 06-exo.scss via la commande 
+  // sass 06-exo.scss 06-exo.css --watch
+
+*/
 
 /*# sourceMappingURL=05-partial.css.map */
