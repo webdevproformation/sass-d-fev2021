@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn1, .btn5, .btn3, .btn4 {
   border-radius: 5px;
   padding: 5px 10px;
@@ -26,5 +27,33 @@
   background: green;
   color: white;
 }
+
+/*
+cas pratique 
+
+1/  créer un fichier 03-exo.html (dans le dossier jour2) contenant 5 paragraphes avec 3 mots 
+Chaque paragraphe dispose d'une class p1 , p2 ... p5
+
+2/ créer un fichier 03-exo.scss (dans le dossier jour2)
+
+3/ lancer la commande : sass 02-exo.scss 02-exo.css --watch 
+
+4/ dans le fichier 02-exo.scss écrire les règles suivantes :
+.p1 taille de police 15px / 
+    text shadow 2px 2px grey
+
+.p2 hérite de p1
+    tout en majuscule
+
+.p3 hérite de p1
+    changer sa couleur de texte (votre choix)
+
+.p4 hérité de p2
+    souligner
+
+.p5 hérité de p4
+    largeur de 200px
+    centrer dans la page
+*/
 
 /*# sourceMappingURL=02-heritage.css.map */
