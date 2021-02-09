@@ -1,0 +1,23 @@
+// sass 03-exo.scss 03-exo.css --watch
+.p1{
+    font-size: 15px;
+    text-shadow : 2px 2px grey;
+}
+.p2{
+    @extend .p1;
+    text-transform: uppercase;
+}
+.p3{
+    @extend .p1;
+    color : #75cfb8;
+}
+.p4{
+    @extend .p2;
+    text-decoration: underline;
+}
+.p5{
+    @extend .p4 ;
+    width:200px;
+    text-align: center; // centrer le texte dans le p
+    margin:0 auto; // centrer p dans la page
+}
