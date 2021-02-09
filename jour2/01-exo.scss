@@ -1,0 +1,26 @@
+// sass 01-exo.scss 01-exo.css --watch
+
+$largeur : 30px;
+$hauteur : 12px;
+$rouge : #ff9292 ;
+$vert : #bbdfc8;
+$sommaire : ".introduction";
+// utiliser les variables 
+h1{
+    width : $largeur / 2;
+    height: $hauteur *2 ;
+    padding : $hauteur / 2;
+}
+a{
+    color : $rouge;
+    &:hover{
+        color : $vert;
+    }
+}
+.sommaire{
+    width : $largeur * 2;
+    height: $hauteur *4 ;
+    padding : $hauteur ;
+    border : 2px solid $vert ; 
+}
+

@@ -1,0 +1,21 @@
+h1 {
+  width: 15px;
+  height: 24px;
+  padding: 6px;
+}
+
+a {
+  color: #ff9292;
+}
+a:hover {
+  color: #bbdfc8;
+}
+
+.sommaire {
+  width: 60px;
+  height: 48px;
+  padding: 12px;
+  border: 2px solid #bbdfc8;
+}
+
+/*# sourceMappingURL=01-exo.css.map */
