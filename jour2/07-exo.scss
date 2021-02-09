@@ -1,0 +1,33 @@
+// @use ou @import ??
+// vu qu'il n'exite pas de variables identiques (même nom) dans les deux fichiers à importer
+// @import 
+@import "_responsive.scss";
+@import "_palette.scss";
+// utiliser les variables 
+@media #{$ecran-tablette-portrait}{
+    h1{
+        font-size: 25px;
+        color: $amethyst;
+    }
+    p{
+        font-size: 15px;
+        color:$emerald;
+    }
+    body{
+        background: $turquoise;
+    }
+}
+@media  #{$ecran-tablette-paysage}{
+    h1{
+        font-size: 27px;
+        color: $emerald;
+    }
+    p{
+        font-size: 17px;
+        color:$peter-river;
+    }
+    body{
+        background: $amethyst;
+    }  
+}
+// sass 07-exo.scss 07-exo.css --watch
