@@ -40,7 +40,7 @@ a{
 // il est possible de donner des valeurs par défaut aux paramètres => utiliser des images 
 // la mixin miniature dispose de 2 paramètres 
 // auxquels on a défini une valeur par défaut 
-@mixin miniature ( $angle : 5px , $couleur : white  ){
+@mixin miniature ( $angle : 5px , $couleur : white ){
     border-radius: $angle ;
     padding : 10px;
     background: $couleur;
@@ -63,3 +63,32 @@ a{
     // mais vu que l'ordre n'est pas respecté => 
     // $couleur : green
 }
+lorem20
+/*
+créer le fichier 09-exo.html 
+    balise div qui a la class container 
+        h1 qui contient 5 mots fictifs 
+        3 p contenant 10 mots fictifs 
+        deux images comme attribut src la valeur suivante : 
+            https://via.placeholder.com/150x100
+
+créer le fichier 09-exo.scss 
+    créer deux mixin 
+        centrer 
+        pas de parametre
+            width 960px 
+            margin 0 auto
+        
+        bordure 
+        deux paramètres 
+            epaisseur
+            couleur : #3498db  (dispose d'une valeur par défaut )
+        
+        utiliser la mixin centrer sur la balise qui a la class container 
+
+        utiliser la mixin bordure sur les balises img et h1 
+
+        styliser les p 
+            supprimer les marges 
+
+*/
