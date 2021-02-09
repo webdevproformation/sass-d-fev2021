@@ -1,0 +1,30 @@
+.btn1, .btn5, .btn3, .btn4 {
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn2 {
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: red;
+}
+
+.btn3, .btn4 {
+  background: blue;
+  color: white;
+}
+
+.btn4 {
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.btn5 {
+  border-radius: 50px;
+  background: green;
+  color: white;
+}
+
+/*# sourceMappingURL=02-heritage.css.map */

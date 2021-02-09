@@ -1,0 +1,60 @@
+// arrêter // nettoyer cls / clear 
+// sass 02-heritage.scss 02-heritage.css --watch
+
+// nouveau mot clé de SASS (qui n'existe pas en css)
+// @extend => héritage 
+
+// button que vous mettez dans votre site 
+
+// créer en plus du fichier sass, un fichier html 
+// 02-heritage.html
+
+// tous les boutons se ressemblent un peu 
+
+.btn1{
+    border-radius: 5px;
+    padding : 5px 10px;
+    cursor: pointer;
+}
+
+// en css => le bouton qui a la class .btn2, il a les même règle
+// mais en + il va avoir le fond en rouge
+
+.btn2{
+    border-radius: 5px;
+    padding : 5px 10px;
+    cursor: pointer;
+    background: red;
+}
+
+// dans ce cas, pour éviter de répéter le règles d'un sélecteur à l'autre => héritage en sass 
+
+.btn3{
+    @extend .btn1;
+    background: blue;
+    color:white;
+}
+
+// .btn4 => héritage sur une sélecteur qui a lui même hérité 
+// même que le bouton btn3 mais plus grand => plus de padding + taille de police + grande 
+
+.btn4{
+    @extend .btn3;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+// .btn5 
+// ressemble au bouton .btn1
+// ressemble à un pilule
+// fond de couleur verte 
+
+.btn5{
+    @extend .btn1 ;
+    border-radius: 50px;
+    background: green;
+    color:white;
+}
+
+
+
