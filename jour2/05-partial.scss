@@ -14,10 +14,12 @@
 
 // dans le fichier partial importer le contenu du fichier _variable.scss via l'instruction suivante 
 
+@use "_variable2.scss" as fichier1 ;
 @import "_variable.scss"; // importer toute le contenu du fichier (partial) _variable.scss
 
+
 h1{
-    height: $hauteur;
+    height: fichier1.$hauteur;
     width: $largeur;
 }
 
