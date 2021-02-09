@@ -1,0 +1,128 @@
+url : https://formation.webdevpro.net/sass/
+login : lang
+mdp : lang 
+
+----------------------------
+
+https://github.com/webdevproformation/sass-d-fev2021
+
+----------------------------
+
+Elise 
+=> problème sur la couleur jaune dernière exo 
+
+Francis 
+=> problème de connexion 
+
+----------------------------
+
+SASS => langage de type préprocesseur 
+permettre écrire du css plus rapidement 
+?? apporte de nombreux concepts absents de CSS 
+
+=> Variable css 
+=> Imbrication 
+
+=> Librairie (jQuery)/ Bootstrap => l'objectif de SASS 
+=> faciliter la vie du développeur
+=> augmenter sa productivité : moins écrire / mieux ranger son code ! 
+
+1 crée un fichier avec une extension => .scss 
+2 utiliser un logiciel en ligne de commande qui va traduire (compiler) .scss => .css 
+
+ATTENTION il faut OBLIGATOIREMENT être dans la dossier qui contient le fichier .scss
+
+Error reading 10-exo.scss: no such file or directory.
+
+=> si vous avez cette erreur 
+=> Ctrl + C puis O
+
+Windows / Mac / Linux 
+
+C:\Users\HP\Desktop\sass => VOUS DEVEZ voir le nom du dossier qui contient le fichier .scss à compiler 
+
+//---------------------------
+
+sass nom-fichier.scss nom-fichier.css --watch 
+
+//---------------------------
+
+Découvrir SASS 
+
+---------
+
+$nom-variable : 12px;
+$nom-variable : 12px 24px;
+$nom-variable : 12px solid blue;
+
+// dans une variable vous pouvez stocker un ou plusieurs variables 
+$variable2 : $nom-variable / 2;
+
+// créer une variale à partie d'une variable 
+
+// très pratique => pour bien organiser son code 
+
+// utiliser les variables : 2 manières possibles 
+// valeur 
+h1{
+    font-size : $variable2 ;
+}
+// sélecteur 
+#{$variable2}{
+    font-size : 30px
+}
+
+---------
+
+Nesting => Imbrication : éviter de répéter la balise parente dans les sélecteurs 
+// écrire css classique 
+nav ul{ 
+    list-style: none;
+}
+nav li{
+    font-size: 20px;
+}
+// équivalent en SASS avec le Nesting 
+nav{
+    ul{
+        list-style: none;
+    }
+    li{
+        font-size: 20px;
+    }
+}
+// pseudo sélecteur :hover :after :nth-child()
+a{
+    color: green;
+}
+a:hover{
+    color: red;
+}
+// équivalent avec le Nesting en utilisant le symbole & (é commercial)
+a{
+    color: green;
+    &:hover{
+        color: red;
+    }
+}
+
+// quelquesoit la taille de l'écran => pour les p de la page sont de couleur jaune 
+
+p{
+    color:yellow;
+}
+
+// tu mets le selecteur et la règle css un autre sélecteur 
+// le sélecteur qui contient le p et le yellow => mediaquery 
+// imposer des conditions pour appliquer les règles à l'intérieur des accolades 
+// p est jaune UNIQUEMENT si 
+// min-width:400px ET max-width:700px => écran qui largeur ENTRE 400px et 700px 
+
+// en dessous 400px 
+// et au dessus de 700px => p => couleur noire 
+
+@media (min-width:400px) and (max-width:700px){
+    p{
+        color:yellow;
+    }
+}

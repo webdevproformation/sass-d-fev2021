@@ -1,6 +1,7 @@
 //sass 10-exo.scss 10-exo.css --watch
 
 $ecran-tablette : "(min-width:400px) and (max-width:700px)";
+// largeur d'écran pas de hauteur d'écran
 
 .intro{
     p:nth-of-type(3){
@@ -12,7 +13,7 @@ $ecran-tablette : "(min-width:400px) and (max-width:700px)";
 }
 .conclusion{
     p:nth-of-type(2):hover{
-        color:blue;
+        color:blue; 
     }
 }
 p{
@@ -20,3 +21,6 @@ p{
         color:yellow;
     }
 }
+// variable et nesting 
+// propre SASS => permet d'éviter de répéter le même code
+// permet d'améliorer l'organisation de notre code scss
