@@ -1,0 +1,31 @@
+// sass 09-exo.scss 09-exo.css --watch
+
+@mixin center {
+    width: 960px;
+    margin: 0 auto;
+}
+@mixin bordure( $epaisseur , $couleur : #3498db ){
+    border : $epaisseur  solid $couleur ;
+}
+.container{
+    @include center;
+}
+
+h1, img {
+     @include bordure( 1px );
+}
+
+p{
+    margin: 0;
+}
+// installer sass 
+// site de nodejs => télécharger et installé nodejs 
+// npm i -g sass 
+// sass ....
+// PHP => exécuter du php => Apache (module mod_php)
+// SASS => exécuter via js => NodeJS          sass 
+// Visual => Javascript => Meteor () => NodeJS 
+
+// => fullStack javascript
+// js => site internet
+// js => mais aussi Meteor
