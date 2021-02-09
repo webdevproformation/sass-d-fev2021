@@ -1,1 +1,28 @@
 // sass 05-partial.scss 05-partial.css --watch
+
+// en SASS, il possible de créer dans variable 
+// nesting / héritage 
+// plus votre projet de site internet est complexe et plus vous allez avoir des fichiers qui  sont longs => de nombreuses lignes 
+
+// découper votre fichier .scss et plusieurs fichiers 
+// partiel 
+
+// fichier stocker toutes les variables de votre projet 
+// plutôt créer un fichier à part 
+
+// le nom du fichier => commence par le symbole tiret bas (underscore)  _variable.scss
+
+// dans le fichier partial importer le contenu du fichier _variable.scss via l'instruction suivante 
+
+@import "_variable.scss"; // importer toute le contenu du fichier (partial) _variable.scss
+
+h1{
+    height: $hauteur;
+    width: $largeur;
+}
+
+// le fichier _variable.scss est automatiquement compiler 
+// pas besoin de le préciser dansla commande de compilation
+// sass 05-partial.scss 05-partial.css --watch
+// compilateur va chercher de lui même le contenu des divers fichiers qui sont importés dans 05-partial.scss
+// technique très intéressant permet de réutiliser du code d'un projet à un autre 
