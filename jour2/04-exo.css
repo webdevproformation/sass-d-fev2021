@@ -1,0 +1,24 @@
+.img1, .img3, .img4, .img2 {
+  /* border:3px solid black; */
+  padding: 3px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 2px 2px aqua;
+}
+
+.img2 {
+  background: white;
+  border-radius: 100px;
+}
+
+.img3, .img4 {
+  background: white;
+  border-radius: 0px;
+  border: 1px solid black;
+}
+
+.img4 {
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=04-exo.css.map */
