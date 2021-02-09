@@ -20,11 +20,9 @@
     @extend .img3;
     border-radius: 5px;
 }
-
 #a{
     color: red;
 }
-
 .lien{
     @extend #a;
 }
