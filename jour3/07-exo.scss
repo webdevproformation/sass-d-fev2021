@@ -1,0 +1,31 @@
+//sass 07-exo.scss 07-exo.css --watch
+
+@mixin mis-enforme-img{
+    margin-right: 10px;
+    border:2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    article{
+        @include mis-enforme-img;
+        // si je passe la souris sur la 1ère image => rotation de 180deg en 1 seconde 
+        &:nth-child(1){ // etat initial
+            transition : 1s transform;
+        }
+        &:nth-child(1):hover{ // etat final
+            transform: rotate(180deg);
+        }
+    }
+}
+// en css 
+//.container article:nth-child(1){}
+//.container article:nth-child(1):hover{}

@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+}
+.container article {
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
+}
+.container article:nth-child(1) {
+  transition: 1s transform;
+}
+.container article:nth-child(1):hover {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=07-exo.css.map */
