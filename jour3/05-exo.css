@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   display: flex;
@@ -25,6 +26,14 @@ body {
     img:nth-of-type(3){
         @include mis-enforme-image(300, 300);
     }
-}*/
+}
+// rdv 16h01 pour la suite 
+// boucle !! 
+// re !!
+// animation en css ??? 
+// rappel animation en css 
+// créer un fichier 06-animation.html
+
+*/
 
 /*# sourceMappingURL=05-exo.css.map */

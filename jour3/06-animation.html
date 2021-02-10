@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*état initial */
+        .partie1 button{
+            font-size: 30px;
+            background: red;
+            margin-left: 0px; 
+            transition: 3000ms background , 2000ms font-size , 1000ms margin-left;
+        }
+        /*il est possible d'ANIMER la passage red => green 
+            voir le changement de couleur 
+            la balise qui a l'état initial => transition 
+        */
+        /*état final suite à une action => passer la souris sur le bouton */
+        .partie1 button:hover{
+            font-size: 40px;
+            background: green;
+            margin-left:60px;
+        }
+        /*
+            la propriété transition permet de faire changer un élément sélectionner
+            d'un état à un autre dans une durée déterminée  
+        */
+
+        /*2ème manière de créer des animations avec css UNIQUEMENT */
+
+        .partie2 button{
+            border:1px solid black;
+            padding : 5px 10px;
+            border-radius: 5px;
+            animation: 2000ms deplacement infinite alternate-reverse;
+        }
+        @keyframes deplacement { /* css classique = décrire l'animation  */
+            from{ /*etat de départ*/ 
+                margin-left : 60px;
+                opacity: 0;
+            }
+            to{ /*état final */
+                margin-left : 0px;
+                opacity: 1;
+            }
+        }
+        /* animation => exécuter dès que la page est disponible */
+
+    </style>
+</head>
+<body>
+    <section class="partie1">
+        <h2>Transition</h2>
+        <button>Action 1</button>
+    </section>
+    <section class="partie2">
+        <h2>Animation + Keyframe</h2>
+        <button>Action 2</button>
+    </section>
+</body>
+</html>
