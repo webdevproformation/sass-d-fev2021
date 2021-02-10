@@ -1,0 +1,177 @@
+url : https://formation.webdevpro.net/sass/
+login : lang
+mdp : lang 
+
+----------------------------
+
+https://github.com/webdevproformation/sass-d-fev2021
+
+----------------------------
+
+Nouveau dossier => jour3 
+
+des questions ?? 
+
+Yonis :
+mixin ??? quelle est la différence avec l'héritage 
+
+Francis :
+mixin plus d'explications
+
+----------------------------- 
+
+Sass un langage qui est basé sur le css 
+    ET qui apporte des concepts absent en css 
+
+1 variable et des calculs avancés
+2 imbrication / (nesting)
+
+3 héritage 
+
+permet d'utiliser un sélecteur comme Parent d'une autre 
+Vue que le Parent possède des propriétés css 
+L'enfant va en hérité (récupérer toutes les propriétés du Parent )
+
+.button{
+    border-radius : 5px;
+    border: none;
+    padding: 5px 10px ;
+    background: none ;
+    cursor:pointer;
+}
+// quelquesoit le bouton dans mon site => minimum cette mise en forme 
+// qui va être utilisée 
+
+// => ce bouton avec un effet => changer sa couleur de fond rouge / text en blanc 
+
+.button-danger{
+    @extend .button;
+    background: red;
+    color : white;
+}
+
+.button-danger-xl{
+    @extend .button-danger;
+    padding : 10px 20px;
+    font-size : 20px;
+}
+// Bootstrap => https://getbootstrap.com/docs/5.0/components/buttons/
+
+
+//--------------------------- 
+
+il est possible de découper votre fichier SASS en plusieurs fichiers plus petits 
+
+vous utilisez alors le système de Partial 
+a/ créer un fichier principal 
+b/ plein de fichiers qui vont stocker certains aspects du site : variables / fonction ...
+    couleur / palette de couleur 
+    largeur variable
+    responsive design
+    fonction (fichier spécial avec les mixin)
+---------------------- 
+le fichier principal, son nom peut être :
+main.scss , principal.scss, style.scss 
+il va contenir les @import (récupérer tous les fichiers partials)
+---------------------- 
+les petits fichiers 
+_colors.scss 
+_responsive.scss
+_general.scss
+_page-accueil.scss / _page_contact.scss 
+
+=> les fichiers .scss sont plus petits => plus facile à lire / maintenir 
+------------------------ 
+cas praticulier : si j'ai deux partials qui contiennent le nom de variable 
+
+_fichier1.scss 
+    $h = 30px;
+
+_fichier2.scss
+    $h = #bbdfc8;
+
+style.scss 
+    @import "_fichier2.scss";
+    @import "_fichier1.scss";
+
+    h1{
+        color : $h; // #bbdfc8; si fichier 2 importer à la fin
+        color : $h ; // 30px ;
+    }
+// au lieu d'utiliser le mot clé @import => @use 
+//--------------
+
+style.scss 
+    @use "_fichier2.scss" as f2; // au début des fichiers 
+    @use "_fichier1.scss" as f1;
+
+    h1{
+        color : f2.$h; // utilise la variable $h qui est dans le fichier f2 
+    }
+
+//--------------
+
+mixin c'est la capacité de créer des fonctions dans SASS 
+
+une fonction permet de stocker des instructions 
+une variable permet de stocker une ou plusieurs valeurs 
+
+// déclare => créer une fonction 
+
+@mixin nomFonction { // sans paramètre
+    color: red;
+    padding : 20px;
+    border: none;
+}
+// utiliser la fonction 
+h1{
+    @include nomFonction ;
+}
+// ça ressemble beaucoup à l'héritage dans ce cas là 
+// dans le cas d'une mixin sans paramètre 
+.autreNom{
+    color: red;
+    padding : 20px;
+    border: none;
+}
+h1{
+    @extend .autreNom;
+}
+// dès que vous créez une mixin avec des paramètres => il n'y a pas d'équivalent avec l'héritage 
+bonjour Bonjour 
+bonjour .bonjour
+
+//-------------- 
+// mixin avec paramètres 
+@mixin fonction($p1 , $p2){
+    border : $p1 solid $p2 ;
+}
+
+p{
+    @include fonction( 1px , #fff ) ;
+}
+
+// mixin avec paramètres qui ont des valeurs par défaut 
+
+@mixin bandeau( $largeur : 300px , $couleur : #fff ){
+    width: $largeur ;
+    background : $couleur ;
+}
+
+// mixin avec plusieurs paramètres qui ont des valeurs par défaut 
+// plusieurs manières de l'utiliser 
+
+p{
+    @include bandeau ; // utile les valeurs par défaut
+    color : green;
+}
+
+p{
+    @include bandeau( 200px ) ; // largeur = 200px et $couleur : #fff
+}
+
+p{
+    @include bandeau( $couleur : #000 ) ; // largeur : 300px (défault) et et $couleur:#000
+}
+
+// fin 
