@@ -1,0 +1,21 @@
+// sass 02-exo.scss 02-exo.css --watch
+$m : 10px;
+@mixin grille($col , $m){
+    display: grid;
+    grid-template-columns: $col;
+    grid-gap: $m;
+}
+.articles{
+   @include grille(1fr 1fr 1fr , $m );
+    button{
+        width: 100%;
+        text-align: center;
+    }
+}
+.images{
+    @include grille(1fr 1fr , $m );
+    margin-top: $m;
+    img{
+        width:100%;
+    }
+}
