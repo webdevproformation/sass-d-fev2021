@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   background: maroon;
 }
@@ -13,5 +14,34 @@ h2 {
   border: 1px solid white;
   box-shadow: 2px 2px 2px black;
 }
+
+/*
+cas pratique 
+
+1/ créer deux fichiers : un 05-exo.html et un 05-exo.scss
+
+2 dans le fichier 05-exo.html
+
+  balise div ayant la class container qui contient le html suivant :
+    h2 avec 10 mots
+    3 paragraphes avec 30mots
+    3 images 300x200
+
+3/ dans le fichier .scss, vous allez réaliser les mises en forme suivantes :
+
+  a/ centrer en largeur et en hauteur le contenu de la balise ayant la class container
+
+  b/ créer une fonction qui va avoir 
+        nom mis-enforme-image
+        deux paramètres largeur et hauteur
+        et contient les instructions suivantes
+            si la largeur == hauteur = border-radius : 50%
+            sinon = border-radius : 5px
+
+  c/ utiliser cette fonction sur la premier et la dernière image dans la balise .container
+
+
+
+*/
 
 /*# sourceMappingURL=04-if.css.map */
