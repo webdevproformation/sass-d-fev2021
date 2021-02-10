@@ -1,0 +1,75 @@
+// sass 01-exo.scss 01-exo.css --watch
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+$petit-ecran : "(max-width:480px)";
+
+header{
+    display:grid; // permet de créer une grille 
+    grid-template-columns: 120px 1fr; // deux colonnes 120px // le reste disponible
+    // https://via.placeholder.com/100x80
+    align-items: center;
+    @media #{$petit-ecran}{
+        grid-template-columns: 1fr; // passe sur 1 colonne qui fait toute la largeur disponible 
+    }
+    ul{
+        display:flex; // li les un à côté des autres
+        list-style: none; // enlever les puces 
+        justify-content: space-between; // prendre l'espace à droite des li 
+        // répartir de manière égale entre les li
+        @media #{$petit-ecran}{
+            margin: 20px 0;
+        }
+    }
+    div{
+        @media #{$petit-ecran}{
+            display: none;
+        }
+    }
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; // grille de 4 colonnes et chaque colonne va prendre 1/4 de l'espace disponible
+    grid-gap:10px;// permet d'ajouter un espace de 10px entre chaque cellule  de la grille
+    @media (max-width:720px){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media #{$petit-ecran}{
+        grid-template-columns: 1fr 1fr ;
+    }
+    @media (max-width:350px){
+        grid-template-columns: 1fr ;
+    }
+    img{
+        width:100%;// image doit faire la largeur de la colonne 
+    }
+}
+
+// background : #fff;
+// background : url() 
+
+// en css 
+@media screen and (max-width:300px){
+    p{
+
+    }
+}
+// en sass 
+
+p{
+    @media screen and (max-width:300px){
+
+    }
+}
+$v : "screen and (max-width:300px)";
+
+p{
+    @media #{$v} {
+        
+    }
+}
+
