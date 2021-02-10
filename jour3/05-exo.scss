@@ -1,0 +1,31 @@
+//sass 05-exo.scss 05-exo.css --watch
+@mixin mis-enforme-image($largeur , $hauteur){
+    @if($largeur == $hauteur){
+        border-radius: 50%;
+    }
+    @else{
+        border-radius: 5px;
+    }
+}
+@mixin mis-enforme-image2($nb ,$largeur , $hauteur){
+    img:nth-of-type(#{$nb}){
+        @if($largeur == $hauteur){
+            border-radius: 50%;
+        }
+        @else{
+            border-radius: 5px;
+        }
+    }
+}
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+.container{
+    width: 960px;
+    margin:auto;
+    @include mis-enforme-image2(1,300, 200);
+    @include mis-enforme-image2(3,300, 300);
+}
+
