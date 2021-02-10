@@ -1,0 +1,17 @@
+h1 {
+  background: maroon;
+}
+
+h1 {
+  width: 200px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px white;
+}
+
+h2 {
+  width: 200px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px black;
+}
+
+/*# sourceMappingURL=04-if.css.map */

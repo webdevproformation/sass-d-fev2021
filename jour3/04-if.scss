@@ -1,0 +1,65 @@
+//sass 04-if.scss 04-if.css --watch
+
+// en SASS il est possible de mettre en place des conditions via la syntaxe suivante 
+
+$nbCol : 2 ; // créer une variable et on stocke dedans le chiffre 2
+
+// dans les parenthèses du @if => condition / vérification
+.exemple{
+    @if ($nbCol > 3) { 
+        // vous pouvez utiliser tous les symboles pour créer des boolean
+        // > supérieur strictement
+        // < inférieur strictement
+        // <= inférieur ou égal
+        // >= supérieur ou égal
+        // == égal
+        // != différent 
+        // === n'existe pas en SASS uniquement en javascript 
+    
+        // si la condition est true dans les parenthèses => ajouter les instructions dans les accolades du @if
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+h1{
+    @if ($nbCol == 2) {
+        background: maroon; // cette règle est ajoutée
+    }
+}
+
+// possibilité de faire des @if @else if @else
+// même principe que l'on a vu ensemble en JS et PHP .;
+.exemple2{
+    @if $nbCol > 10{
+
+    }
+    @else if $nbCol > 3{
+
+    }
+    @else if $nbCol > 0{
+
+    }
+    @else {
+
+    }
+}
+
+@mixin banniere ($largeur , $mode ){
+    width: $largeur;
+    @if($mode == "sombre"){
+        border: 1px solid black;
+        box-shadow : 2px 2px 2px white;
+    }
+    @else if($mode == "clair"){
+        border: 1px solid white;
+        box-shadow : 2px 2px 2px black;
+    }
+}
+
+h1{
+    @include banniere(200px, "sombre" );
+}
+h2{
+    @include banniere(200px, "clair" );
+}
