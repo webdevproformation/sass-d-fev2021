@@ -1,0 +1,56 @@
+// sass 04-exo.scss 04-exo.css --watch
+
+/*
+.h1{
+    font-size : 25rem ;
+}
+.h2{
+    font-size : 20rem;
+}
+.h3{
+    font-size : 15rem;
+}
+.h4{
+    font-size : 10rem;
+}
+.h5{
+    font-size : 5rem;
+}
+
+*/
+
+// solution 1
+
+@for $i from 1 through 5{
+    .h#{$i}{
+        font-size: (30  - 5 * $i) + rem;
+    }
+}
+
+// solution 2
+
+$var : (
+    "1" : 25,
+    "2" : 20 ,
+    "3" : 15 ,
+    "4" : 10 ,
+    "5" : 5
+);
+
+@each $chiffre , $valeur in $var{
+    .h#{$chiffre}{
+        font-size: $valeur+rem;
+    }
+}
+
+// solution 3 Asma !
+
+@for $j from 5 through 1{
+    .h#{$j}{
+       font-size: $j*5+rem;
+    }
+}
+
+// pause café ! 
+// build in function => plein de cas 
+// 15h52
