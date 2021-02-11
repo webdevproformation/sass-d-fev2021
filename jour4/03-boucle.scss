@@ -1,0 +1,93 @@
+// sass 03-boucle.scss 03-boucle.css --watch
+// cls
+// clear
+
+// sass 
+//a variable $variable 
+//b héritage @extend
+//c nesting 
+//d partials (découper les fichiers SASS en plusieurs fichiers ) @import / @use 
+//e fonction => @mixin / @include 
+//f condition @if @else if @else 
+//g => boucle 
+
+// il existe plusieurs manières de faire des boucles 
+
+// @for
+
+@for $i from 1 through 6 { // ruby ?? 
+    h#{$i}{
+        margin:0;
+        padding : $i+px ; // concaténation
+    }
+}
+
+// variables contiennent 1 ou plusieurs valeurs 
+
+$var1 : 10px;
+$var2 : 2px solid grey ;
+
+// liste // map 
+
+$var3 : 10px , 12px , 15px ; // [10px, 12px, 15px]
+// attention il y a une virgule entre chaque valeur !! 
+
+@each $v  in $var3{ // parcourir le contenu de la variable $var3
+    h1{
+        font-size: $v;
+    }
+}
+
+// liste complexe / map complexe  // objet
+/*
+ressemble objet en javascript 
+{ 
+    h1 : red,
+    h2 : blue,
+    h3 :  green,
+    p : yellow
+}
+*/
+$var4 : ( 
+    "h1" : red,
+    "h2" : blue,
+    "h3" : green,
+    "p"  : yellow
+);
+
+@each $balise , $couleur in $var4{
+    #{$balise}{
+        color : $couleur;
+    }
+}
+// parcouru la variable $var4 
+
+// li je veux utiliser la couleur green 
+li{
+    color : map-get($var4 , p); // build in de SASS 
+}
+
+$var5 : pink, red , yellow; // liste => commence 1
+p{
+    color :nth($var5 ,2 ); //  color: red;
+}
+
+
+// variables complexes en scss 
+
+$accueil : (
+    "h2" : (20px , red , center),
+    "p" : (16px, blue, right),
+    "a" : (12px , black , left)
+);
+
+@each $selecteur , $val in $accueil{
+    #{$selecteur}{
+        font-size: nth($val,1);
+        color: nth($val,2);
+        text-align: nth($val,3);
+    }
+}
+
+
+
