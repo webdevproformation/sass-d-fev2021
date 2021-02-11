@@ -1,0 +1,113 @@
+// sass 05-buildin.scss 05-buildin.css --watch
+
+// en plus d'apporter de nombreuses supplémentaires, SASS met à dispose de
+// des fonctions disponibles par défaut dans le langage 
+
+// fonctions sont classés sur le type de variable que l'on peut modifier
+
+// fonction => modifier des chiffres 
+
+$var1 : 12 ;
+$var2 : 2 ;
+
+// percentage()
+h1{
+    font-size: $var2 / $var1;
+    font-size: percentage($var2 / $var1); // %
+}
+
+// fonction d'arrondi 
+// floor() => sol
+// ceil() ceiling => plafond 
+// round() => arrondi classique 
+
+$var3 : 5 ;
+$var4 : 7 ;
+
+h1{
+    font-size: $var3/$var4;
+    font-size: floor($var3/$var4); // chiffre entier le plus petit
+    font-size: ceil($var3/$var4); // chiffre entier le plus grand
+    font-size: round($var3/$var4)+px; // si le résultat 0.5 => 1 
+                                    // 0.49   => 0
+}
+
+// chiffre au hasard 
+// random()
+
+h1{
+    font-size: random(100)+px;
+    // chiffre aléatoire entre 0 et 100
+    // à chaque compilation
+}
+
+
+// fonction qui vont permettre de modifier les variables
+// qui contiennent des valeur de couleur 
+
+$var5 : red ;
+
+// je veux du rouge un peu plus foncé 
+// darken()
+
+// un peu plus claire 
+// lighten() 
+
+button{
+    background: $var5;
+    &:hover{
+        background: darken( $var5 , 60% );
+    }
+}
+a{
+    color : #99bbad;
+    &:hover{
+        color : lighten( #99bbad , 15% );
+    }
+}
+// ajouter // enlever de l'opacité à une couleur 
+// rgba() 
+$var6 : #91091e ;
+p{
+    color : rgba($var6 , 0.8);
+}
+// grayscale() 
+li{
+    color : grayscale(#da723c); // en niveau de gris de la couleur mentionnée 
+}
+// couleur => écran 
+// combinaison 
+// R G B 
+// red // Green // bleu
+// 0 - 255
+// couleurs primaires
+
+// rgb( 12 , 30 , 200 )
+$couleurInitiale : rgb(102, 141, 51);
+
+p{
+    color : lighten($couleurInitiale , 20%);
+    border : 1px solid $couleurInitiale;
+}
+
+// permet de récupérer des valeurs stockées 
+
+// nth() => liste (tableau)
+// map-get() => map (objet)
+
+$liste1 : red, green, blue , pink ;
+// attention dans une liste les valeurs sont séparées avec des virgules ! 
+// l'index (position) commence au chiffre 1 
+p{
+    color : nth($liste1 , 4);
+}
+
+$objet : (
+    ".titre" : red ,
+    ".link" : green,
+    ".item" : blue
+);
+
+p{
+    color : map-get($objet , ".item");
+}

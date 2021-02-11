@@ -1,0 +1,52 @@
+h1 {
+  font-size: 0.1666666667;
+  font-size: 16.6666666667%;
+}
+
+h1 {
+  font-size: 0.7142857143;
+  font-size: 0;
+  font-size: 1;
+  font-size: 1px;
+}
+
+h1 {
+  font-size: 81px;
+}
+
+button {
+  background: red;
+}
+button:hover {
+  background: black;
+}
+
+a {
+  color: #99bbad;
+}
+a:hover {
+  color: #c7dad2;
+}
+
+p {
+  color: rgba(145, 9, 30, 0.8);
+}
+
+li {
+  color: #8b8b8b;
+}
+
+p {
+  color: #9ac660;
+  border: 1px solid #668d33;
+}
+
+p {
+  color: pink;
+}
+
+p {
+  color: blue;
+}
+
+/*# sourceMappingURL=05-buildin.css.map */

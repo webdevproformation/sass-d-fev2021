@@ -26,9 +26,7 @@
         font-size: (30  - 5 * $i) + rem;
     }
 }
-
 // solution 2
-
 $var : (
     "1" : 25,
     "2" : 20 ,
@@ -36,7 +34,6 @@ $var : (
     "4" : 10 ,
     "5" : 5
 );
-
 @each $chiffre , $valeur in $var{
     .h#{$chiffre}{
         font-size: $valeur+rem;
@@ -44,7 +41,6 @@ $var : (
 }
 
 // solution 3 Asma !
-
 @for $j from 5 through 1{
     .h#{$j}{
        font-size: $j*5+rem;
@@ -54,3 +50,7 @@ $var : (
 // pause café ! 
 // build in function => plein de cas 
 // 15h52
+
+// fonction buildin 
+
+// 05-buildin.scss
