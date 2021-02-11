@@ -2,6 +2,12 @@
 
 @mixin mis-enforme-img{
     margin-right: 10px;
+   
+}
+
+img{
+    width: 100%;
+    height: auto;
     border:2px solid black;
     border-radius: 5px;
     box-shadow: 2px 2px 2px grey;
@@ -18,10 +24,11 @@ body{
     article{
         @include mis-enforme-img;
         // si je passe la souris sur la 1ère image => rotation de 180deg en 1 seconde 
-        &:nth-child(1){ // etat initial
+        &:nth-child(1) img{ // etat initial
             transition : 1s transform;
+           
         }
-        &:nth-child(1):hover{ // etat final
+        &:nth-child(1):hover img{ // etat final
             transform: rotate(180deg);
         }
     }

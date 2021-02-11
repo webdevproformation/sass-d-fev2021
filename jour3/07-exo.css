@@ -1,3 +1,11 @@
+img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -9,14 +17,12 @@ body {
 }
 .container article {
   margin-right: 10px;
-  border: 2px solid black;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px grey;
 }
-.container article:nth-child(1) {
+.container article:nth-child(1) img {
   transition: 1s transform;
+  pointer-events: none;
 }
-.container article:nth-child(1):hover {
+.container article:nth-child(1):hover img {
   transform: rotate(180deg);
 }
 
