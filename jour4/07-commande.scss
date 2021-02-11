@@ -1,0 +1,32 @@
+// 07-commande.scss
+// sass 07-commande.scss 07-commande.css --watch
+
+// transformer le fichier 07-commande.scss => 07-commande.css
+
+// vous pouvez choisir à votre convenance le nom du fichier css à créer 
+// sass 07-commande.scss style.css
+
+// compile moi le fichier .scss en .css sans générer le fichier .map 
+// dans le fichier .css généré il n'y a pas la ligne finale commentaire 
+/*# sourceMappingURL=05-buildin.css.map */
+
+// sass 07-commande.scss 07-commande.css --no-source-map
+
+h1{
+    color:blue;
+}
+
+h2{
+    color:red;
+}
+
+// gérer une version compact du fichier css 
+// enlever les sauts de ligne et les espaces pour faire en sorte que le css soit le plus petit possible et terme de poids
+
+// sass 07-commande.scss 07-commande.css --no-source-map --style=compressed
+// sass 02-exo.scss 02-exo.css --no-source-map --style=compressed
+// sass 02-exo.scss 02-exo.css --no-source-map --style=expanded
+
+// https://sass-lang.com/documentation/cli/dart-sass
+
+// des questions ?????????
