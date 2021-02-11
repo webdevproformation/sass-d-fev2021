@@ -1,0 +1,26 @@
+h1 {
+  color: blue;
+  font-size: 30px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+.container article {
+  border: 1px solid green;
+}
+.container button {
+  background: red;
+  transition: 1s background;
+}
+.container button:hover {
+  background: green;
+}
+
+p {
+  border: 2px solid #a97d74;
+  color: #ede4e2;
+}
+
+/*# sourceMappingURL=06-exemple.css.map */

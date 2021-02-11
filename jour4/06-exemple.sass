@@ -1,0 +1,45 @@
+// 06-exemple.sass 
+// sass 06-exemple.sass 06-exemple.css --watch
+// pour faire du sass 
+// .scss 
+// .sass
+// ressemble beaucoup .scss  sauf ne pas utiliser { }
+// enlever les ; 
+// attention ici il faut OBLIGATOIREMENT respecter les indentations 
+
+$var1 : 30px
+
+h1
+    color: blue
+    font-size: $var1 
+
+// .sass => ressemble beaucoup au langage Python 
+
+// nesting 
+
+.container
+    margin: 0 auto
+    width: 960px
+
+    article
+        border: 1px solid green
+    
+    button
+        background: red
+        transition: 1s background
+        &:hover
+            background: green
+
+@mixin mis-en-forme($p1, $p2)
+    border: $p1 solid darken($p2 , 15%)
+    color: lighten($p2 , 20%) 
+
+p
+    @include mis-en-forme(2px, #c6a9a3)
+
+// sass => ressemble beaucoup au scss MAIS 
+
+// plus d'accolade et de ; 
+// respecter les indentations ! 
+//   propriete: valeur
+// écriture alternative
