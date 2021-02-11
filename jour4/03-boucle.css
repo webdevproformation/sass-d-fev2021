@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   margin: 0;
   padding: 1px;
@@ -90,5 +91,25 @@ a {
   color: black;
   text-align: left;
 }
+
+/*
+réaliser une boucle en sass qui va générer le code css suivant :
+
+.h1{
+    font-size : 25rem ;
+}
+.h2{
+    font-size : 20rem;
+}
+.h3{
+    font-size : 15rem;
+}
+.h4{
+    font-size : 10rem;
+}
+.h5{
+    font-size : 5rem;
+}
+*/
 
 /*# sourceMappingURL=03-boucle.css.map */
