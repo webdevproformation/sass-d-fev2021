@@ -1,0 +1,100 @@
+// sass 01-exo.scss 01-exo.css --watch
+
+// quand vous écrivez du html => les balises vont avoir un peu de mise en forme par défaut
+// p 
+// h1
+
+// réinialiser le navigateur => enlever les marges par défaut des balises que j'utilise 
+
+h1, h2, h3{ 
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// fin réinialiser des balises 
+
+//générale 
+a{
+    text-decoration: none;
+    color:grey;
+}
+
+body{
+    font-family: sans-serif;
+}
+// variable 
+// mixin 
+// zone entête 
+header{
+    display: flex; // met les éléments les uns à côté des autres 
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        display: flex;
+        align-items: center;
+    }
+    li{
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .last{
+        border:1px solid blue;
+        padding: 5px 15px;
+        border-radius: 5px;
+        transition: 1s background, 1s color ;
+    }
+    .last:hover{
+        background: blue;
+    }
+    .last:hover a{
+        color:white;
+    }
+}
+
+main{
+    width: 60%;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    p{
+        margin: 20px 0;
+    }
+    .prix{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    article{
+        border:1px solid grey;
+        border-radius: 5px;
+        h2{
+            padding: 10px 0;
+            background: rgb(218, 209, 209);
+        }
+        h3{
+            padding: 10px 0;
+        }
+        a{
+            border:1px solid blue;
+            padding: 10px 0px;
+            margin: 20px 40px;
+            border-radius: 5px;
+            display: block;
+        }
+        a.actif{
+            background: blue;
+            color: white;
+        }
+    }
+}
+
+
+

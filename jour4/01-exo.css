@@ -1,0 +1,86 @@
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header li {
+  margin-left: 20px;
+  cursor: pointer;
+}
+header .last {
+  border: 1px solid blue;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 1s background, 1s color;
+}
+header .last:hover {
+  background: blue;
+}
+header .last:hover a {
+  color: white;
+}
+
+main {
+  width: 60%;
+  margin: 30px auto 0 auto;
+  text-align: center;
+}
+main p {
+  margin: 20px 0;
+}
+main .prix {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+main article {
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+main article h2 {
+  padding: 10px 0;
+  background: #dad1d1;
+}
+main article h3 {
+  padding: 10px 0;
+}
+main article a {
+  border: 1px solid blue;
+  padding: 10px 0px;
+  margin: 20px 40px;
+  border-radius: 5px;
+  display: block;
+}
+main article a.actif {
+  background: blue;
+  color: white;
+}
+
+/*# sourceMappingURL=01-exo.css.map */
