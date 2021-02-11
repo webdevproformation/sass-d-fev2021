@@ -1,0 +1,106 @@
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  color: grey;
+}
+
+h1 {
+  font-family: serif;
+}
+
+h1, h2, label {
+  color: black;
+}
+
+iframe {
+  width: 100% !important;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+header p {
+  margin-bottom: 30px;
+}
+header hr {
+  width: 20px;
+  border: 1px solid black;
+  margin-bottom: 90px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 30px;
+  align-items: flex-start;
+}
+main form {
+  display: grid;
+  grid-gap: 30px;
+}
+main form input {
+  padding: 15px 10px;
+  border: 2px solid #dbd9d9;
+}
+main form textarea {
+  padding: 15px 10px;
+  border: 2px solid #dbd9d9;
+  height: 150px;
+}
+main form p {
+  text-align: center;
+  color: black;
+}
+main form input[type=submit] {
+  margin-top: 90px;
+  justify-self: flex-end;
+  padding: 15px 50px;
+  background: none;
+  border: 2px solid black;
+  color: black;
+  cursor: pointer;
+  transition: 1s background, 1s color;
+}
+main form input[type=submit]:hover {
+  color: white;
+  background: black;
+}
+main aside h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+main aside iframe {
+  height: 250px !important;
+  margin-bottom: 15px;
+}
+main aside p {
+  font-size: 13px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+main aside ul {
+  margin-bottom: 15px;
+}
+main aside li {
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=02-exo.css.map */

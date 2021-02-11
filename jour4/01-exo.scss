@@ -4,23 +4,7 @@
 // p 
 // h1
 
-// réinialiser le navigateur => enlever les marges par défaut des balises que j'utilise 
-
-h1, h2, h3{ 
-    margin: 0;
-}
-
-p{
-    margin: 0;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-// fin réinialiser des balises 
+@import "_reset.scss";
 
 //générale 
 a{

@@ -1,0 +1,109 @@
+// sass 02-exo.scss 02-exo.css --watch
+
+// créer un fichier _reset.scss
+@import "_reset.scss";
+
+
+// générale  => règles s'appliquent à toutes balises dans la page 
+body{
+    font-family: sans-serif;
+    color : grey;
+}
+
+h1{
+    font-family: serif; // ff raccourci Emmet
+}
+
+h1, h2 , label{
+    color:black; // règle de police de caractère 
+    // qui sont héritées par les enfants 
+}
+
+iframe{
+    width: 100% !important;
+}
+// générale 
+
+$esp : 30px;
+
+// détail 
+
+// zone d'entête 
+
+header{
+    text-align: center; // centrer du texte dans une balise
+    h1{
+        margin-bottom: $esp;
+        font-size: 25px;
+    }
+    p{
+        margin-bottom: $esp;
+    }
+    hr{
+        width:20px;
+        border:1px solid black;
+        margin-bottom: $esp * 3;
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; // 1000px / 3.5 = 
+    grid-gap: $esp;
+    align-items: flex-start;
+    form{
+        display: grid;
+        grid-gap: $esp;
+        input{
+            padding: 15px 10px;
+            border:2px solid rgb(219, 217, 217);
+        }
+        textarea{
+            padding: 15px 10px;
+            border:2px solid rgb(219, 217, 217);
+            height: $esp * 5;
+        }
+        p{
+            text-align: center;
+            color:black;
+        }
+        input[type="submit"]{
+            margin-top: $esp * 3;
+            justify-self: flex-end;
+            padding : 15px 50px;
+            background: none;
+            border:2px solid black;
+            color:black;
+            cursor:pointer;
+            transition: 1s background, 1s color;
+            // https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+        }
+        input[type="submit"]:hover{
+            color:white;
+            background: black;
+        }
+    }
+    aside{
+        h2{
+            font-size: 20px;
+            margin-bottom: $esp / 2;
+            text-transform: uppercase;
+        }
+        iframe{
+            height: 250px !important; // !important => la règle que je viens d'écrire est celle qui doit être appliquée OBLIGATOIREMENT (même si il y a ailleurs une autre règle css qui dit autre chose)
+            margin-bottom: $esp / 2;
+        }
+        p{
+            font-size: 13px;
+            margin-bottom: $esp / 2;
+            text-align: justify;
+        }
+        ul{
+            margin-bottom: $esp / 2;
+        }
+        li{
+            font-size: 13px;
+        }
+    }
+}
+
