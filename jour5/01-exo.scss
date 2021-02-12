@@ -1,0 +1,169 @@
+// sass 01-exo.scss 01-exo.css --watch
+
+// reset 
+@import "_reset.scss";
+
+body{
+    margin: 0;
+}
+
+//si vous ne voulez pas copier et coller le fichier _reset.scss dans le dossier jour5 
+
+//@import "../jour4/_reset.scss" ;
+
+// permet de récupérer le fichier _reset.scss dans le dossier jour4 
+
+// générale => supprimer les empattements
+
+// palette de couleur 
+
+$noir : #110f0f;
+$mauve : #845ec2;
+$vert-fonce : #16c79a;
+$bleu-clair : #f6f5f5;
+$gris : #c7cfb7;
+
+// fin palette de couleur
+
+body{
+    font-family: sans-serif;
+    background: $bleu-clair;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    border-radius: 5px;
+}
+
+
+
+// mixin 
+
+
+
+// fin mixin 
+
+// mise en forme 
+
+// entête du site 
+
+header{
+    .top{
+        background: $noir;
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        a{
+            color: $gris;
+        }
+        a.actif{
+            color:white;
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            margin-right: 20px;
+        }
+        svg{
+            width:10px !important;
+            height: 10px !important;
+        }
+        .logo{
+            margin-right: 40px;
+            color:white;
+        }
+        form{
+            margin-left: auto;
+            .search{
+                border-radius: 5px;
+                border:none;
+                padding: 10px 15px;
+            }
+            .btn{
+                border-radius: 5px;
+                border:1px solid $vert-fonce;
+                padding: 10px 15px;
+                color:white;
+                background: none;
+                cursor: pointer;
+                transition: 0.5s background;
+            }
+            .btn:hover{
+                background: $vert-fonce;
+            }
+        }
+    }
+    .bottom{
+        padding: 10px 20px;
+        background: white;
+        margin-bottom: 10px;
+        ul{
+            display: flex;
+        }
+        li{
+            margin-right: 10px;
+        }
+        a{
+            color:$gris;
+            font-size: 14px;
+        }
+    }
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+    header{
+        background: $mauve;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        img{
+            margin-right: 10px;
+        }
+        h1{
+            font-size: 14px;
+            color: white;
+        }
+        p{
+            font-size: 12px;
+            color:$gris;
+        }
+    }
+    section{
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        h2{
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $bleu-clair;
+            font-size: 18px;
+        }
+        article{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid $bleu-clair;
+            img{
+                margin-right: 10px;
+            }
+            p{
+                width: 60%;
+            }
+            a{
+                margin-left: auto;
+                font-size: 12px;
+            }
+        }
+        div{
+            padding: 20px 0;
+            text-align: right;
+            font-size: 12px;
+        }
+    }
+}
