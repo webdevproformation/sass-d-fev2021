@@ -1,0 +1,78 @@
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.onglets {
+  width: 400px;
+  font-family: sans-serif;
+}
+.onglets header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+.onglets header svg {
+  display: block;
+  width: 25px !important;
+  height: 25px !important;
+  margin: 5px auto;
+}
+.onglets header div {
+  cursor: pointer;
+  background: grey;
+  color: #534f4f;
+  padding-bottom: 5px;
+}
+.onglets header div.actif {
+  color: white;
+  background: blue;
+}
+.onglets header .first {
+  border-top-left-radius: 5px;
+  border: 1px solid blue;
+}
+.onglets header .middle {
+  border-top: 1px solid #534f4f;
+  border-bottom: 1px solid #534f4f;
+}
+.onglets header .last {
+  border-top-right-radius: 5px;
+  border: 1px solid #534f4f;
+}
+.onglets ul li {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #534f4f;
+  border-right: 1px solid #534f4f;
+  border-left: 1px solid #534f4f;
+}
+.onglets ul li:nth-child(3) {
+  border-bottom: 1px solid #534f4f;
+}
+.onglets ul img {
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.onglets ul svg {
+  color: orange;
+}
+
+/*# sourceMappingURL=03-exo.css.map */

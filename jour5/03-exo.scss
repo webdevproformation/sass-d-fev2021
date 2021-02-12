@@ -1,0 +1,81 @@
+// sass 03-exo.scss 03-exo.css --watch
+
+@import "_reset.scss";
+
+// palette de couleurs 
+// lorsque vous compilez 
+// sass 03-exo.scss 03-exo.css --watch => 
+// à la fin du fichier css généré => /*# sourceMappingURL=03-exo.css.map */
+
+// permet au navigateur de faire le lien entre le fichier .css et de .scss
+// le fichier .map + navigateur + commentaire à al fin du css généré => permet de faire le chemin inverse => sans le fichier scss !!
+
+
+$gris-fonce : rgb(83, 79, 79);
+$bleu : blue;
+$orange : orange;
+
+body{
+    margin: 0; // centrer un élément dans un autre parfaitement
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.onglets{
+    width: 400px;
+    font-family: sans-serif;
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        svg{
+            display: block;
+            width:25px !important;
+            height:25px !important;
+            margin: 5px auto;
+        }
+        div{
+            cursor: pointer;
+            background: grey;
+            color: $gris-fonce;
+            padding-bottom: 5px;
+        }
+        div.actif{
+            color:white;
+            background: $bleu;
+        }
+        .first{
+            border-top-left-radius: 5px;
+            border:1px solid $bleu;
+        }
+        .middle{
+            border-top: 1px solid $gris-fonce;
+            border-bottom: 1px solid $gris-fonce;
+        }
+        .last{
+            border-top-right-radius: 5px;
+            border:1px solid $gris-fonce;
+        }
+    }
+    ul{
+        li{
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid $gris-fonce;
+            border-right: 1px solid $gris-fonce;
+            border-left: 1px solid $gris-fonce;
+        }
+        li:nth-child(3){
+            border-bottom: 1px solid $gris-fonce;
+        }
+        img{
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        svg{
+            color:$orange;
+        }
+    }
+}
