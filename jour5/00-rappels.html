@@ -1,0 +1,68 @@
+url : https://formation.webdevpro.net/sass/
+login : lang
+mdp : lang 
+
+----------------------------
+
+https://github.com/webdevproformation/sass-d-fev2021
+
+
+des questions ? des rappels 
+
+boucle 
+
+@for $i from 10 through 20{
+    p{
+        font-size : $i+px ;
+    }
+}
+
+// tableau = list en scss 
+
+$t = 12,2,3;
+
+@each $el in $t {
+    p{
+        font-size : $el+px ;
+    }
+}
+// objet = map en scss
+
+$m = ( 
+    "t" : 12px,
+    "e" : 23px
+);
+
+@each $key , $valeur  in  $m{
+    .#{$key}{
+        font-size : $valeur+px ;
+    }
+}
+
+
+fonctions build in : permet d'effeecter des calculs / traitement avancé avec SASS 
+
+// chiffre 
+
+percentage() => valeur en %
+random() => chiffre aléatoire 0 jusqu'au chiffre mentionné entre les ()
+ceil() => arrondi au chiffre au dessus
+floor() => arrondi au chiffre au dessous
+round() => arrondi classique  si O.5 => chiffre au dessus sinon au dessous 
+
+// couleur 
+
+darken( $couleur , pourcentage ) assombrir
+lighten($couleur , pourcentage) éclaircir
+rgba($couleur , pourcentage) ajouter / supprimer de l'opacité
+grayscale($couleur ) niveau de gris d'une couleur 
+
+// manipulation de map / list 
+
+nth($list,$index) => récupérer une valeur dans un tableau (list)
+map-get($map,$index-map) => récupérer une valeur dans un objet (map)
+
+//------------- 
+
+cas pratique créer le fichier 01-exo.html et le fichier 01-exo.scss 
+réaliser le design présenté dans le fichier 01-exo.png
